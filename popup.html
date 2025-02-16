@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ISAAC Hash</title>
+  <link rel="stylesheet" href="styles/popup.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 1.5em; /* Smaller main title */
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 90%;
+      padding: 5px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px; /* Ensure the font size is adequate for CJK characters */
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 2px; /* Tiny distance between buttons */
+    }
+    button {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      font-size: 0.8em;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #output {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>ISAAC Hash</h1>
+  <input type="password" id="mainKey" placeholder="M">
+  <input type="text" id="siteKey" placeholder="S">
+  <div class="button-container">
+    <button id="generateBtn">Generate</button>
+    <button id="clearClipboardBtn">Clear</button>
+  </div>
+  <p id="output"></p>
+  <script src="hash.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
