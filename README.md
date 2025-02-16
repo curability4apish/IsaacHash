@@ -1,3 +1,7 @@
+This is my project. Since cryptography is not my major, it needs audit.
+https://github.com/curability4apish/IsaacHash/edit/main/README.md
+---
+
 ### About
 A hash function to effectively create a secure and unique password for each service.
 
@@ -30,8 +34,8 @@ It is an Chromium extension, and it workable on desktop devices or Android with 
 When you click on the icon of this extension, it shows a distraction-free tiny pop-up.
 ![image](https://github.com/user-attachments/assets/235e864a-25a7-461d-a10c-869156baaaf7)
 
-There're two input bars. One is `Master_Key`, and another is `Slave_Key`.
-For example, if you want to generate/retrieve your Facebook password, you should enter correct `masterKey` and `slaveKey` that align with your registration setup. Those keys can be either memorable or you can log them elsewhere physically or digitally secure.
+There're two input bars. One is `mainKey`, and another is `siteKey`.
+For example, if you want to generate/retrieve your Facebook password, you should enter correct `mainKey` and `siteKey` that align with your registration setup. Those keys can be either memorable or you can log them elsewhere physically or digitally secure.
 
 
 
@@ -49,7 +53,7 @@ function derivePassword(mainKey, siteKey) {
 }
 ```
 As above,
-`password = hash(masterKey + hash(slaveKey))`.
+`password = hash(mainKey + hash(siteKey))`.
 
 - How is `hash` designed
 
@@ -120,9 +124,6 @@ function binaryStringToArray(binaryString) {
 [3]. [Rosetta Code](https://rosettacode.org/wiki/The_ISAAC_cipher)
 
 [4]. [Wikipedia](https://en.wikipedia.org/wiki/ISAAC_(cipher))
-
-
-
 
 
 
