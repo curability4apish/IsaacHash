@@ -35,7 +35,7 @@ When you click on the icon of this extension, it shows a distraction-free tiny p
 ![image](https://github.com/user-attachments/assets/235e864a-25a7-461d-a10c-869156baaaf7)
 
 There're two input bars. One is `mainKey`, and another is `siteKey`.
-For example, if you want to generate/retrieve your Facebook password, you should enter correct `mainKey` and `siteKey` that align with your registration setup. Those keys can be either memorable or you can log them elsewhere physically or digitally secure.
+For example, if you want to generate/retrieve your Facebook password, you should enter correct `mainKey` and `siteKey` that align with your registration setup. Those keys can be either mnemonic or you can log them elsewhere physically or digitally secure.
 
 
 
