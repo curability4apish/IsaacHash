@@ -64,14 +64,14 @@ function simpleHash(input) {
     seed(isaac.state, binaryStringToArray(decompose('yourSalt')));
     // Seed the PRNG with the input key
     seed(isaac.state, binaryArray);
-    // Generate a hash by taking five random numbers and converting them to hexadecimal
+    // Generate a hash by taking five 4-byte integers and converting them to hexadecimal
     let hash = '';
     for (let i = 0; i < 5; i++) {
         const randNum = isaac.rand();
         const hexRandNum = randNum.toString(16).padStart(8, '0');
         hash += hexRandNum;
     }
-    return hash;
+    return hash; // `hash` is a 160-bit hexadecimal
 }
 ```
 As above, when you enter a key string, each character will be transformed into unicode, and be decomposed into 21-bit binary string with `decompose`. Then those binary strings will be combined together into one.
@@ -110,7 +110,8 @@ function binaryStringToArray(binaryString) {
     return binaryString.split('').map(char => parseInt(char, 10));
 }
 ```
-When the seeding process is done, 
+
+
 
 
 
