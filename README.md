@@ -26,6 +26,11 @@ It doesn't use `localStorage` or produce any logs.
 
 It is an Chromium extension, and it workable on desktop devices or Android with `Kiwi Browser` or `Lemur Browser`.
 
+### How it works
+- UI
+![image](https://github.com/user-attachments/assets/6b56f5c9-d2b0-45c9-893d-44cb43bd6996)
+
+
 
 
 
