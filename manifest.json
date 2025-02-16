@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "ISAAC",
+  "version": "v250216",
+  "description": "A hash function to effectively create a secure and unique password for each service.",
+  "action": {
+    "default_popup": "popup.html"
+  }, 
+  "icons": {
+    "16": "images/icon16.png",   
+    "48": "images/icon48.png",   
+    "128": "images/icon128.png"  
+  }
+}
