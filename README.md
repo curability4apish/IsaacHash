@@ -5,7 +5,7 @@ A hash function to effectively create a secure and unique password for each serv
 
 - Secure
 
-ISAAC cipher has very strong avalanche effects: every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. `IsaacHash` implements ISAAC.
+[ISAAC](https://en.wikipedia.org/wiki/ISAAC_(cipher)) has very strong avalanche effects: every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. `IsaacHash` [implements ISAAC](https://burtleburtle.net/bob//c/readable.c).
 
 - Customizable
 
