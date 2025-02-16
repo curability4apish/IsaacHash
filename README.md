@@ -1,5 +1,5 @@
 ### About
-A hash function to effectively create a strong and unique password for each service.
+A hash function to effectively create a secure and unique password for each service.
 
 ### Philosophy
 
