@@ -51,6 +51,10 @@ function derivePassword(mainKey, siteKey) {
 As above mentioned,
 `password = hash(masterKey + hash(slaveKey))`.
 
+- How is `hash` designed
+
+
+
 
 
 
