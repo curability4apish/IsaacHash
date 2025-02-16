@@ -29,6 +29,7 @@ It is an Chromium extension, and it workable on desktop devices or Android with 
 ### How it works
 When you click on the icon of this extension, it shows a distraction-free tiny pop-up.
 ![image](https://github.com/user-attachments/assets/235e864a-25a7-461d-a10c-869156baaaf7)
+
 There're two input bars. One is `Master_Key`, and another is `Slave_Key`.
 For example, if you want to generate
 
