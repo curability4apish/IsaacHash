@@ -6,7 +6,7 @@ ISAAC cipher has strong avalanche effects on password generation. Every unknown 
 
 - Highly customizable
 
-In `hash.js`, you are encouraged to customiza your secret 256-bit salt. It mitigates the risks of password leakage either if you accidentally reveal your keys but not salt, or your keys are set as weak, ~~but you are not encouraged to have weak keys.~~
+In `hash.js`, you are encouraged to customiza your secret 256-bit salt. It mitigates the risks of password leakage either if you accidentally reveal your keys but not salt, or your keys are set as weak, ~~but you are not encouraged to have weak keys for security reasons.~~
 ```
 seed(isaac.state, binaryStringToArray(decompose(yourSalt)));
 ```
