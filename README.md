@@ -112,7 +112,7 @@ function binaryStringToArray(binaryString) {
 ```
 
 - References
-- 
+
 [1]. [Code of ISAAC](https://burtleburtle.net/bob//c/readable.c)
 
 [2]. [ISAAC's theory written by the author](https://burtleburtle.net/bob/rand/isaac.html)
