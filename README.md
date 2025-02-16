@@ -5,7 +5,7 @@ An effective tool to create a strong and unique password for each service.
 
 - Secure
 
-ISAAC cipher has very strong avalanche effects: every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. `IsaacHash` re-implements ISAAC.
+ISAAC cipher has very strong avalanche effects: every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. `IsaacHash` implements ISAAC.
 
 - Customizable
 
@@ -31,12 +31,25 @@ When you click on the icon of this extension, it shows a distraction-free tiny p
 ![image](https://github.com/user-attachments/assets/235e864a-25a7-461d-a10c-869156baaaf7)
 
 There're two input bars. One is `Master_Key`, and another is `Slave_Key`.
-For example, if you want to generate/retrieve your Facebook password, you should enter correct `Master_Key` and `Slave_Key` that align with your registration setup. Those keys can be either memorable or you can log them elsewhere physically or digitally secure.
+For example, if you want to generate/retrieve your Facebook password, you should enter correct `masterKey` and `slaveKey` that align with your registration setup. Those keys can be either memorable or you can log them elsewhere physically or digitally secure.
 
 
 
 ### Theories
 
+- How is each `password` determined
+
+`hash` is a hash function that implements ISAAC.
+
+```
+function derivePassword(mainKey, siteKey) {
+  const hashedSiteKey = simpleHash(siteKey);
+  const combinedKey = hashedSiteKey + mainKey;
+  return simpleHash(combinedKey);
+}
+```
+As above mentioned,
+`password = hash(masterKey + hash(slaveKey))`
 
 
 
