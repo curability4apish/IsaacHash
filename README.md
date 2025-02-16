@@ -60,9 +60,9 @@ function simpleHash(input) {
     const binaryArray = binaryStringToArray(binaryString);
     // Create an instance of the ISAAC PRNG
     const isaac = new ISAAC();
-    // Seed the PRNG with a fixed value (for reproducibility)
-    seed(isaac.state, binaryStringToArray(decompose('90c12c2d77fd9543d2771a6')));
-    // Seed the PRNG with the input string
+    // Seed the PRNG with yourSalt
+    seed(isaac.state, binaryStringToArray(decompose('yourSalt')));
+    // Seed the PRNG with the input key
     seed(isaac.state, binaryArray);
     // Generate a hash by taking five random numbers and converting them to hexadecimal
     let hash = '';
@@ -104,7 +104,13 @@ function seed(state, arr) {
     }
 }
 ```
-As above, 
+```
+// Function to convert a binary string to an array
+function binaryStringToArray(binaryString) {
+    return binaryString.split('').map(char => parseInt(char, 10));
+}
+```
+When the seeding process is done, 
 
 
 
