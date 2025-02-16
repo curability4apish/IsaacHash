@@ -20,7 +20,7 @@ The size of this extension is about 30 kB.
 
 - Logless
 
-It doesn't use `localStorage` or produce any logs. ISAAC uses deterministic algorithm, so your password can be retrieved with correct keys any time you wish.
+It doesn't use `localStorage` or produce any logs. ISAAC uses deterministic algorithm, so your password can be retrieved with correct keys whenever you wish.
 
 - Cross-platform
 
