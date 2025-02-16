@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "IsaacHash",
-  "version": "v250216",
+  "version": "25.02.16",
   "description": "A hash function to effectively create a secure and unique password for each service.",
   "action": {
     "default_popup": "popup.html"
