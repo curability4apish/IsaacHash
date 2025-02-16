@@ -48,10 +48,65 @@ function derivePassword(mainKey, siteKey) {
   return simpleHash(combinedKey);
 }
 ```
-As above mentioned,
+As above,
 `password = hash(masterKey + hash(slaveKey))`.
 
 - How is `hash` designed
+
+```
+function simpleHash(input) {
+    const binaryString = decompose(input);
+    // Convert the binary string to an array
+    const binaryArray = binaryStringToArray(binaryString);
+    // Create an instance of the ISAAC PRNG
+    const isaac = new ISAAC();
+    // Seed the PRNG with a fixed value (for reproducibility)
+    seed(isaac.state, binaryStringToArray(decompose('90c12c2d77fd9543d2771a6')));
+    // Seed the PRNG with the input string
+    seed(isaac.state, binaryArray);
+    // Generate a hash by taking five random numbers and converting them to hexadecimal
+    let hash = '';
+    for (let i = 0; i < 5; i++) {
+        const randNum = isaac.rand();
+        const hexRandNum = randNum.toString(16).padStart(8, '0');
+        hash += hexRandNum;
+    }
+    return hash;
+}
+```
+As above, when you enter a key string, each character will be transformed into unicode, and be decomposed into 21-bit binary string with `decompose`. Then those binary strings will be combined together into one.
+
+`seed` will change the internal state of ISAAC with `mix` or `isaac`, dependent on each bit consecutively.
+```
+function decompose(str) {
+    let binaryString = '';
+    // Iterate over the characters in the string
+    for (let i = 0; i < str.length; i++) {
+        let unicodeValue = str.charCodeAt(i);
+        // Convert the Unicode value to a binary string and pad it to 21 bits
+        let binaryValue = unicodeValue.toString(2).padStart(21, '0');
+        // Append the binary value to the binary string
+        binaryString += binaryValue;
+    }
+    return binaryString;
+}
+```
+```
+function seed(state, arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            // If the value is 0, perform one iteration of the PRNG mixing step
+            mix(state); // Corrected: Pass the state object
+        } else {
+            // Otherwise, refresh the random state
+            isaac(state); // Corrected: Pass the state object
+        }
+    }
+}
+```
+As above, 
+
+
 
 
 
