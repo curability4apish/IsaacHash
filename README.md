@@ -2,11 +2,10 @@
 An effective tool to create a strong and unique password for each service.
 
 ### Philosophy
-ISAAC cipher has strong avalanche effects on password generation. Every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. IsaacHash re-implements ISAAC, and its philosophy is to be a secure, logless, lightweight and cross-platform password manager.
 
 - Secure
 
-ISAAC cipher has strong avalanche effects on password generation. Every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. `IsaacHash` re-implements ISAAC.
+ISAAC cipher has very strong avalanche effects: every unknown tiny change of its initial state can cause unpredictable output, therefore it is resistant to brute force attack and pre-calculated attack, and hasn't be proven any vulnerabilities for more than 30 years. `IsaacHash` re-implements ISAAC.
 
 - Customizable
 
@@ -22,6 +21,10 @@ The size of this extension is about 30 kB.
 - Logless
 
 It doesn't use `localStorage` or produce any logs.
+
+- Cross-platform
+
+It is an Chromium extension, and it workable on desktop devices or Android with `Kiwi Browser` or `Lemur Browser`.
 
 
 
