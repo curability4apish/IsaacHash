@@ -49,7 +49,7 @@ function derivePassword(mainKey, siteKey) {
 }
 ```
 As above mentioned,
-`password = hash(masterKey + hash(slaveKey))`
+`password = hash(masterKey + hash(slaveKey))`.
 
 
 
