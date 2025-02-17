@@ -1,5 +1,4 @@
 This is my project. Since cryptography is not my major, it needs audit.
-https://github.com/curability4apish/IsaacHash/edit/main/README.md
 ---
 
 ### About
