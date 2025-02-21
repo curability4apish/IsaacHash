@@ -12,7 +12,7 @@ A hash function to effectively create a secure and unique password for each serv
 
 - Customizable
 
-In `hash.js`, you are encouraged to customize your secret 256-bit salt. It mitigates the risks that your passwords being cracked by preventing pre-calculated attack.
+In `hash.js`, you are encouraged to customize your secret 256-bit salt. It mitigates the risks that your passwords being cracked by preventing pre-calculated attack. I've also developed a [tool](https://github.com/curability4apish/BogoTRNG) to generate it.
 
 ```
 seed(isaac.state, binaryStringToArray(decompose(yourSalt)));
