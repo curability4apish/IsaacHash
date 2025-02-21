@@ -12,7 +12,8 @@ A hash function to effectively create a secure and unique password for each serv
 
 - Customizable
 
-In `hash.js`, you are encouraged to customiza your secret 256-bit salt. It mitigates the risks of password leakage either if you accidentally reveal your keys but not salt, or your keys are set as weak, ~~but you are not encouraged to have weak keys for security reasons.~~
+In `hash.js`, you are encouraged to customize your secret 256-bit salt. It mitigates the risks that your passwords being cracked by preventing pre-calculated attack.
+
 ```
 seed(isaac.state, binaryStringToArray(decompose(yourSalt)));
 ```
