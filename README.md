@@ -125,6 +125,10 @@ function binaryStringToArray(binaryString) {
 
 [4]. [Wikipedia](https://en.wikipedia.org/wiki/ISAAC_(cipher))
 
+### Note
+
+If you are using it, please backup yourself, because future updates are possible.
+
 
 
 
